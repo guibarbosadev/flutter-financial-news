@@ -1,13 +1,17 @@
+import 'package:meta/meta.dart';
+
 class News {
   String category;
   String headline;
-  String readMinutes;
-  List<NewsImages> images; 
+  int readMinutes;
+  List<NewsImage> images;
+
+  News({this.category, this.headline, this.readMinutes, this.images});
 }
 
-class NewsImages {
+class NewsImage {
   final String imagePath;
   final String type;
 
-  NewsImages({this.imagePath, this.type});
+  NewsImage({@required this.imagePath, @required this.type});
 }
