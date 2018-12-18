@@ -5,7 +5,7 @@ void main() {
   runApp(MaterialApp(
     home: HomePage(),
     theme: ThemeData.fallback().copyWith(
-      accentColor: Color(0XFF2f5093),
+      primaryColor: Color(0XFF0E4A8F)
     ),
   ));
 }
