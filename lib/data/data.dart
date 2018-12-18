@@ -24,4 +24,15 @@ final List<News> listNews = [
       ),
     ],
   ),
+  News(
+    category: 'Banking',
+    headline: 'Navigating the uncertain future of branch banking',
+    readMinutes: 2,
+    images: [
+      NewsImage(
+        imagePath: 'assets/images/dollar.jpg',
+        type: 'landscape',
+      ),
+    ],
+  ),
 ];
