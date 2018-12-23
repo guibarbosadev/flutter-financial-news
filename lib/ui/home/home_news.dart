@@ -43,7 +43,10 @@ class HomeNews extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text(news.category),
+                        Text(news.category,
+                        style: Theme.of(context).textTheme.body1.copyWith(
+                          color: news.getTagColor()
+                        ),),
                         Text('${news.readMinutes} min read'),
                       ],
                     ),

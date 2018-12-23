@@ -49,19 +49,46 @@ class _HomePageState extends State<HomePage> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.folder_open),
-              title: Text('My news'),
+              title: Text('My news',
+              style: Theme.of(context)
+                      .textTheme
+                      .body1
+                      .copyWith(fontSize: 10.0,
+                      color: Colors.grey[500],),
+            )
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.account_circle),
-              title: Text('Financial News'),
+              title: Text('Financial News',
+                  style: Theme.of(context)
+                      .textTheme
+                      .body1
+                      .copyWith(fontSize: 10.0,
+                      color: Colors.grey[500]),
+            )
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.search),
-              title: Text('Search'),
+              title: Text(
+                'Search',
+                style: Theme.of(context)
+                      .textTheme
+                      .body1
+                      .copyWith(fontSize: 10.0,
+                      color: Colors.grey[500]),
+              
+            ),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.bookmark),
-              title: Text('Saved'),
+              title: Text('Saved',
+              style: Theme.of(context)
+                      .textTheme
+                      .body1
+                      .copyWith(fontSize: 10.0,
+                      color: Colors.grey[500]
+            )
+            )
             )
           ],
         ));
