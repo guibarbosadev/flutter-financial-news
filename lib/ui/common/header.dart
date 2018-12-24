@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class HomeHeader extends StatelessWidget {
-  const HomeHeader({
-    Key key,
-  }) : super(key: key);
+class Header extends StatelessWidget {
+  final bool showTopicButton;
+
+  Header({@required this.showTopicButton});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class HomeHeader extends StatelessWidget {
               )
             ]),
           ),
-          TopicButton(),
+          showTopicButton == true ? TopicButton() : Container()
         ],
       ),
     );
@@ -47,34 +47,22 @@ class TopicButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {},
-        highlightColor: Colors.white,
-        splashColor: Colors.white,
+      highlightColor: Colors.white,
+      splashColor: Colors.white,
       child: Container(
-        padding: EdgeInsets.symmetric(
-          horizontal: 10.0,
-          vertical: 2.0
-        ),
+        padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 2.0),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12.0),
-          border: Border(
-            bottom: BorderSide(
-              color: Theme.of(context).primaryColor,
-              width: 1.0
-            ),
-            left: BorderSide(
-              color: Theme.of(context).primaryColor,
-              width: 1.0
-            ),
-            right: BorderSide(
-              color: Theme.of(context).primaryColor,
-              width: 1.0
-            ),
-            top: BorderSide(
-              color: Theme.of(context).primaryColor,
-              width: 1.0
-            ),
-          )
-        ),
+            borderRadius: BorderRadius.circular(12.0),
+            border: Border(
+              bottom:
+                  BorderSide(color: Theme.of(context).primaryColor, width: 1.0),
+              left:
+                  BorderSide(color: Theme.of(context).primaryColor, width: 1.0),
+              right:
+                  BorderSide(color: Theme.of(context).primaryColor, width: 1.0),
+              top:
+                  BorderSide(color: Theme.of(context).primaryColor, width: 1.0),
+            )),
         child: Text(
           'Topics',
           style: Theme.of(context).textTheme.body1.copyWith(
