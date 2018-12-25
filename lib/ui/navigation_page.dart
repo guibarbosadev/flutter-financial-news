@@ -51,9 +51,7 @@ class _NavigationPageState extends State<NavigationPage> {
         child: Column(children: <Widget>[
           SizedBox(height: 30.0),
           Header(showTopicButton: _activePageIndex == 0 ? true : false),
-          Expanded(
-            child: getCurrentPage(),
-          )
+          getCurrentPage()
         ]),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -94,7 +92,7 @@ class _NavigationPageState extends State<NavigationPage> {
                     )),
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.bookmark),
+              icon: Icon(Icons.bookmark_border),
               title: Text(
                 'Saved',
                 style: Theme.of(context).textTheme.body1.copyWith(

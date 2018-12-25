@@ -6,6 +6,8 @@ class News {
   String headline;
   int readMinutes;
   List<NewsImage> images;
+  bool isFinancialNews;
+  String detailsText;
 
   Color getTagColor() {
     Color response;
@@ -19,6 +21,12 @@ class News {
       case 'banking':
         response = Color(0xFF8dcfed);
         break;
+      case 'ask':
+        response = Color(0xFFe67683);
+        break;
+      case 'technology':
+        response = Color(0XFF0E4A8F);
+        break;
       default:
         response = Colors.black;
     }
@@ -26,7 +34,7 @@ class News {
     return response;
   }
 
-  News({this.category, this.headline, this.readMinutes, this.images});
+  News({@required this.category, @required this.headline, @required this.readMinutes, this.images, this.isFinancialNews : false, this.detailsText});
 }
 
 class NewsImage {

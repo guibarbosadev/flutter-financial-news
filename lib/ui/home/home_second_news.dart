@@ -13,11 +13,21 @@ class HomeSecondNews extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Text(news.category,
-            style: Theme.of(context).textTheme.body1.copyWith(
-              color: news.getTagColor()
-            ),),
-            Text('${news.readMinutes} min read')
+            Text(
+              news.category.toUpperCase(),
+              style: Theme.of(context).textTheme.body1.copyWith(
+                                    color: news.getTagColor(),
+                                    fontSize: 11.0,
+                                    fontWeight: FontWeight.w900,
+                                  )
+            ),
+            Text(
+              '${news.readMinutes} min read',
+              style: Theme.of(context)
+                  .textTheme
+                  .body1
+                  .copyWith(color: Color(0XFFb8bfc9), fontSize: 11.0),
+            )
           ],
         ),
         Padding(
@@ -27,7 +37,7 @@ class HomeSecondNews extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .headline
-                .copyWith(fontWeight: FontWeight.bold, fontSize: 18.0),
+                .copyWith(fontWeight: FontWeight.w900, fontSize: 18.0),
           ),
         ),
         news.images.length > 0

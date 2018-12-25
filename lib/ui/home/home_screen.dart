@@ -14,21 +14,25 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: news.length,
-      itemBuilder: (BuildContext context, int index) {
-        switch (index) {
-          case 0:
-            return HomeSecondNews(news: news[index]);
-            break;
-          case 1:
-            return HomeSecondNews(news: news[index]);
-            break;
-          default:
-            return HomeNews(news: news[index]);
-            break;
-        }
-      },
+    return Expanded(
+          child: ListView.builder(
+        itemCount: news.length,
+        itemBuilder: (BuildContext context, int index) {
+          switch (index) {
+            case 0:
+              return HomeSecondNews(news: news[index]);
+              break;
+            case 1:
+              return HomeSecondNews(news: news[index]);
+              break;
+            default:
+              return !news[index].isFinancialNews
+                  ? HomeNews(news: news[index])
+                  : Container();
+              break;
+          }
+        },
+      ),
     );
   }
 }

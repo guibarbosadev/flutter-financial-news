@@ -28,10 +28,6 @@ class HomeNews extends StatelessWidget {
                               .imagePath,
                         ))),
               ),
-              // child: Image.asset(
-              //   news.images.firstWhere((i) => i.type == 'landscape').imagePath,
-              //   fit: BoxFit.fitHeight,
-              // ),
             ),
             SizedBox(width: 15.0),
             Flexible(
@@ -43,20 +39,26 @@ class HomeNews extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text(news.category,
-                        style: Theme.of(context).textTheme.body1.copyWith(
-                          color: news.getTagColor()
-                        ),),
-                        Text('${news.readMinutes} min read'),
+                        Text(
+                          news.category.toUpperCase(),
+                          style: Theme.of(context).textTheme.body1.copyWith(
+                                    color: news.getTagColor(),
+                                    fontSize: 11.0,
+                                    fontWeight: FontWeight.w900,
+                                  )
+                        ),
+                        Text(
+                          '${news.readMinutes} min read',
+                          style: Theme.of(context).textTheme.body1.copyWith(
+                              color: Color(0XFFb8bfc9), fontSize: 11.0),
+                        ),
                       ],
                     ),
                     SizedBox(height: 10.0),
                     Text(
                       news.headline,
                       style: Theme.of(context).textTheme.headline.copyWith(
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.bold
-                      ),
+                          fontSize: 18.0, fontWeight: FontWeight.w900),
                     )
                   ],
                 ))

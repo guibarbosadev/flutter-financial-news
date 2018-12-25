@@ -31,4 +31,31 @@ final List<News> listNews = [
       ),
     ],
   ),
+  News(
+    category: 'Ask',
+    headline:
+        'Ask a Banker - How not to fail at and improve the customer experience',
+    readMinutes: 7,
+    isFinancialNews: true,
+    images: [
+      NewsImage(
+        imagePath: 'assets/images/woman_1_test.jpg',
+        type: 'portrait',
+      ),
+    ],
+    detailsText:
+        'It has hever been clearer that financial institutions cant afford to fall short on customer experience, according to research from Accentre. In a recent report, title "Back Office, It is Time to Meet the Customers," Accenture revealed that Norh American banks currnetly view customer',
+  ),
+  News(
+    category: 'Technology',
+    headline: 'Navigating the uncertain future of branch banking',
+    readMinutes: 2,
+    isFinancialNews: true,
+    images: [
+      NewsImage(
+        imagePath: 'assets/images/dollar.jpg',
+        type: 'portrait',
+      ),
+    ],
+  ),
 ];
