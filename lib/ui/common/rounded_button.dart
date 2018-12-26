@@ -8,6 +8,7 @@ class RoundedButton extends StatelessWidget {
   final Widget child;
   final EdgeInsets padding;
   final Color borderColor;
+  final Function onTap;
 
   RoundedButton({
     this.buttonColor,
@@ -15,13 +16,14 @@ class RoundedButton extends StatelessWidget {
     this.splashColor,
     this.borderColor,
     this.padding,
+    this.onTap,
     @required this.child,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: this.onTap ?? () {},
       highlightColor: this.highlightColor ?? Colors.white,
       splashColor: this.splashColor ?? Colors.white,
       child: Container(

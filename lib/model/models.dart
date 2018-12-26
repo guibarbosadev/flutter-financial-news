@@ -34,6 +34,10 @@ class News {
     return response;
   }
 
+  String getBackgroundImage() {
+    return this.images.firstWhere((i) => i.type == 'portrait').imagePath;
+  }
+
   News({@required this.category, @required this.headline, @required this.readMinutes, this.images, this.isFinancialNews : false, this.detailsText});
 }
 

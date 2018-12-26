@@ -1,6 +1,7 @@
 import 'package:financial_news/data/data.dart';
 import 'package:financial_news/model/models.dart';
 import 'package:financial_news/ui/common/rounded_button.dart';
+import 'package:financial_news/ui/details/details_page.dart';
 import 'package:flutter/material.dart';
 
 class FinancialNewsScreen extends StatefulWidget {
@@ -23,10 +24,6 @@ class FinancialNewsScreenState extends State<FinancialNewsScreen> {
     super.initState();
   }
 
-  String _getBackgroundImage(List<NewsImage> newsImages) {
-    return newsImages.firstWhere((i) => i.type == 'portrait').imagePath;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -44,7 +41,7 @@ class FinancialNewsScreenState extends State<FinancialNewsScreen> {
                       image: DecorationImage(
                           fit: BoxFit.fitHeight,
                           image: AssetImage(
-                              _getBackgroundImage(news[index].images)))),
+                              news[index].getBackgroundImage()))),
                 ),
               ),
               Positioned(
@@ -101,6 +98,12 @@ class FinancialNewsScreenState extends State<FinancialNewsScreen> {
                         child: RoundedButton(
                           buttonColor: Color(0xFFd10014),
                           borderColor: Color(0xFFd10014),
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (BuildContext context) {
+                              return DetailsPage(news: news[index],);
+                            }));
+                          },
                           padding: EdgeInsets.symmetric(
                               horizontal: 15.0, vertical: 3.0),
                           child: Text(
