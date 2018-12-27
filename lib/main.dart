@@ -10,6 +10,7 @@ void main() {
     theme: ThemeData.fallback().copyWith(
       primaryColor: Color(0XFF0E4A8F),
       buttonTheme: ButtonThemeData(
+        minWidth: 0.0,
         padding: EdgeInsets.symmetric(
           horizontal: 3.0,
           vertical: 1.0

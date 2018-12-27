@@ -8,6 +8,7 @@ class News {
   List<NewsImage> images;
   bool isFinancialNews;
   String detailsText;
+  String subCategory;
 
   Color getTagColor() {
     Color response;
@@ -22,7 +23,7 @@ class News {
         response = Color(0xFF8dcfed);
         break;
       case 'ask':
-        response = Color(0xFFe67683);
+        response = Color(0xFFd10014);
         break;
       case 'technology':
         response = Color(0XFF0E4A8F);
@@ -38,7 +39,7 @@ class News {
     return this.images.firstWhere((i) => i.type == 'portrait').imagePath;
   }
 
-  News({@required this.category, @required this.headline, @required this.readMinutes, this.images, this.isFinancialNews : false, this.detailsText});
+  News({@required this.category, @required this.headline, @required this.readMinutes, this.images, this.isFinancialNews : false, this.detailsText, this.subCategory});
 }
 
 class NewsImage {

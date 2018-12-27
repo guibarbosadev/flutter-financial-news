@@ -72,7 +72,7 @@ class FinancialNewsScreenState extends State<FinancialNewsScreen> {
                               style: Theme.of(context).textTheme.body1.copyWith(
                                     color: news[index].getTagColor(),
                                     fontSize: 11.0,
-                                    fontWeight: FontWeight.w900,
+                                    fontWeight: FontWeight.bold,
                                   ),
                             ),
                             Text(
@@ -96,8 +96,8 @@ class FinancialNewsScreenState extends State<FinancialNewsScreen> {
                       Align(
                         alignment: Alignment.centerRight,
                         child: RoundedButton(
-                          buttonColor: Color(0xFFd10014),
-                          borderColor: Color(0xFFd10014),
+                          buttonColor: news[index].getTagColor(),
+                          borderColor: news[index].getTagColor(),
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (BuildContext context) {

@@ -16,7 +16,7 @@ class DetailsPage extends StatelessWidget {
             Stack(
               children: <Widget>[
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.6,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                       image: DecorationImage(
@@ -38,28 +38,34 @@ class DetailsPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Text(
-                          'Ask a banner',
+                          news.subCategory.toUpperCase(),
                           style: Theme.of(context).textTheme.body1.copyWith(
                                 color: news.getTagColor(),
                                 fontSize: 11.0,
-                                fontWeight: FontWeight.w900,
+                                fontWeight: FontWeight.bold,
                               ),
                         ),
                         Text(
-                          '7 min read',
+                          '${news.readMinutes} min read',
                           style: Theme.of(context).textTheme.body1.copyWith(
                               color: Color(0XFFb8bfc9), fontSize: 11.0),
                         )
                       ],
                     ),
-                    Text(
-                      'How not to fail at and improve the customer experience',
-                      style: Theme.of(context).textTheme.headline.copyWith(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w900,
-                          ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8.0),
+                      child: Text(
+                        news.headline,
+                        style: Theme.of(context).textTheme.headline.copyWith(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w900,
+                            ),
+                      ),
                     ),
-                    Text(news.detailsText)
+                    Text(news.detailsText,
+                    style: Theme.of(context).textTheme.body1.copyWith(
+                      color: Colors.grey[700]
+                    ),)
                   ],
                 ),
               ),

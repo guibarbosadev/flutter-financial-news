@@ -34,9 +34,10 @@ final List<News> listNews = [
   News(
     category: 'Ask',
     headline:
-        'Ask a Banker - How not to fail at and improve the customer experience',
+        'How not to fail at and improve the customer experience',
     readMinutes: 7,
     isFinancialNews: true,
+    subCategory: 'Ask a Banker',
     images: [
       NewsImage(
         imagePath: 'assets/images/woman_1_test.jpg',
