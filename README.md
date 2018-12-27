@@ -1,16 +1,13 @@
-# financial_news
+# Flutter Financial News
 
-A new Flutter project.
+The [design](https://dribbble.com/shots/5689366-Financial-UI-Concepts-on-iPhone-XR#) credits goes to [LaVar McCline](https://dribbble.com/lavarmccline).
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+![Home page screenshot](screenshots/home.png)
+![Financial news page screenshot](screenshots/financial-news.png)
+![Details page screenshot](screenshots/details.png)
 
-A few resources to get you started if this is your first Flutter project:
+##Getting started
+Flutter [online documentation](https://docs.flutter.io). 
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
